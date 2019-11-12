@@ -6,10 +6,10 @@ import sys
 from itertools import product
 
 
-A_loose = R.TFile("ArunTriggerEff/Ele35_pt_eta_EGM_2017Bv6_onlyLoosenominal_efficiency.root")
-A_tight = R.TFile("ArunTriggerEff/Ele35_pt_eta_EGM_2017Bv6_nominal_efficiency.root")
-B_loose = R.TFile("ArunTriggerEff/Ele23_Ele12_leg1_pt_eta_EGM_2017Bv6_onlyLoosenominal_efficiency.root")
-B_tight = R.TFile("ArunTriggerEff/Ele23_Ele12_leg1_pt_eta_EGM_2017Bv6_nominal_efficiency.root")
+A_loose = R.TFile("2017_trigger_eff/Ele35_pt_eta_EGM_2017Bv6_onlyLoosenominal_efficiency.root")
+A_tight = R.TFile("2017_trigger_eff/Ele35_pt_eta_EGM_2017Bv6_nominal_efficiency.root")
+B_loose = R.TFile("2017_trigger_eff/Ele23_Ele12_leg1_pt_eta_EGM_2017Bv6_onlyLoosenominal_efficiency.root")
+B_tight = R.TFile("2017_trigger_eff/Ele23_Ele12_leg1_pt_eta_EGM_2017Bv6_nominal_efficiency.root")
 
 print ("Aloose",[p for p in A_loose.c.GetListOfPrimitives()])
 print ("Atight",[p for p in A_tight.c.GetListOfPrimitives()])
@@ -41,7 +41,7 @@ binsY_A = h_A_L.GetNbinsY()
 binsY_B = h_B_L.GetNbinsY()
 
 
-outputfile = R.TFile("output.root", "recreate")
+outputfile = R.TFile("output_graph.root", "recreate")
 
 bypt = {}
 
